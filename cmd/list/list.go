@@ -14,7 +14,7 @@ const (
 )
 
 var ListCmd = &cobra.Command{
-	Use:       "list {todo|in-progress|done}",
+	Use:       "list {todo|in-progress|done|all}",
 	Short:     "list the tasks of specified type",
 	ValidArgs: []string{TODO, IN_PROGRESS, DONE, ALL},
 	Args:      cobra.MatchAll(cobra.ExactArgs(1), cobra.OnlyValidArgs),
